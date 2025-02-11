@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="João - II2">
+    <meta name="keyword" content="form, html css">
+    <meta name="description" content="Exemplo de utilização">
+    <title>Formulário FEVEREIRO</title>
+</head>
+
+<style>
+    main {
+        margin: 0;
+        padding: 5px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        size: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body {
+        background-color: lightyellow;
+    }
+
+    #name {
+        border-radius: 8px;
+    }
+
+    #email {
+        border-radius: 8px;
+    }
+
+    #textarea {
+        border-radius: 8px;
+    }
+
+    #envio {
+        border-radius: 8px;
+        margin-top: 40px;
+        size: 40px;
+    }
+
+    #envio:hover {
+        color: green;
+        background-color: whitesmoke;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #x {
+        margin-top: 30px;
+    }
+
+    #txt {
+        margin-top: 30px;
+    }
+
+
+</style>
+
+<body>
+    <main>
+        <form action="https://api.staticforms.xyz/submit" method="post" autocomplete="on">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" maxlength="30" minlength="2" autocomplete="name" placeholder="Digite seu nome" autofocus title="Nome completo: (Não digite mais de 30 caracteres)" required>
+            <label for="email" id="x">E-mail:</label>
+            <input type="text" id="email" name="name" maxlength="50" minlength="5" required autocomplete="email" placeholder="Preencha com seu email" title="O e-mail deve conter @ e ‘.’ como separador"> 
+            <label for="textarea" id="txt">Digite aqui sua mensagem:</label>
+            <textarea name="textarea" id="textarea" cols="30" rows="7" maxlength="300" placeholder="Digite aqui"></textarea>
+            <input type="submit" value="Enviar" placeholder="Envie os resultados:" id="envio">
+            <input type="hidden" name="accessKey" value="ba483259-59c7-4a99-83f0-a3042bdc9ff5">
+        </form>
+    </main>
+</body>
+</html>
