@@ -1,0 +1,16 @@
+input, fieldset, textarea, button, select {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type='radio']{display: inline;} 
+input[type='checkbox']{display: inline;}
+
+main {
+    width: 400px;
+    border: 1px solid black;
+    margin: auto;
+    background-color: lightyellow;
+    padding: 10px;
+    box-shadow: 5px 10px 8px #888;
+}
