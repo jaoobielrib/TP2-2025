@@ -1,165 +1,287 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulário 3</title>
-    <link rel="stylesheet" href="formCSS.css">
-</head>
-<body>
-        <h1>Formulário HTML</h1>
-        <h2>Preencha o formulário abaixo:</h2>
-<main>
-    <fieldset>
+    <link rel="stylesheet" href="formCSS.css" />
+  </head>
+  <body>
+    <h1>Formulário HTML</h1>
+    <h2>Preencha o formulário abaixo:</h2>
+    <form action="" method="">
+      <fieldset>
         <legend>Dados Pessoais</legend>
         <div class="divx">
-            <label for="nome">Nome:</label>
-            <input type="text" name="Nome" id="name" placeholder="Fulano de tal">
-            <label for="sobrn">Sobrenome:</label>
-            <input type="text" name="Sobrenome:" id="sobrn" placeholder="ex.: Pereira">
+          <label for="nome">Nome:</label>
+          <input
+            type="text"
+            name="Nome"
+            id="name"
+            placeholder="Fulano de tal"
+          />
+          <label for="sobrn">Sobrenome:</label>
+          <input
+            type="text"
+            name="Sobrenome:"
+            id="sobrn"
+            placeholder="ex.: Pereira"
+          />
         </div>
-        <br>
+        <br />
         <label for="nasc">Nascimento:</label>
-        <input type="date" id="date" placeholder="Dia">
-        <br>
+        <input type="date" id="date" placeholder="Dia" />
+        <br />
         <label for="rg">RG:</label>
-        <input type="number" name="rg" id="rg" placeholder="ex.: 123456789">
-        <br>
+        <input type="number" name="rg" id="rg" placeholder="ex.: 123456789" />
+        <br />
         <label for="cpf">CPF:</label>
-        <input type="number" name="cpf" id="cpf" placeholder="ex.: 12345678901">
-    </fieldset>
-    <fieldset>
+        <input
+          type="number"
+          name="cpf"
+          id="cpf"
+          placeholder="ex.: 12345678901"
+        />
+      </fieldset>
+      <fieldset>
         <legend>Dados de endereço:</legend>
         <label for="rua">Rua:</label>
-        <input type="text" name="rua" id="rua" placeholder="Rua: José Ribeiro">
+        <input
+          type="text"
+          name="rua"
+          id="rua"
+          placeholder="Rua: José Ribeiro"
+        />
+        <br />
         <label for="nmr">Número:</label>
-        <input type="number" name="nmr" id="nmr" placeholder="ex.: 09">
-        <br>
+        <input type="number" name="nmr" id="nmr" placeholder="ex.: 09" />
+        <br />
         <label for="bairro">Bairro:</label>
-        <input type="text" name="bairro" id="bairro" placeholder="ex.: Centro">
-        <br>
+        <input
+          type="text"
+          name="bairro"
+          id="bairro"
+          placeholder="ex.: Centro"
+        />
+        <br />
         <label for="estado">Estado</label>
-            <select id="estado" name="estado">
-                <option value="Selecione seu estado" selected disabled>Selecione seu estado</option>
-                <option value="Acre (AC)">Acre (AC)</option>
-                <option value="Alagoas (AL)">Alagoas (AL)</option>
-                <option value="Amapá (AP)">Amapá (AP)</option>
-                <option value="Amazonas (AM)">Amazonas (AM)</option>
-                <option value="Bahia (BA)">Bahia (BA)</option>
-                <option value="Ceará (CE)">Ceará (CE)</option>
-                <option value="Distrito Federal (DF)">Distrito Federal (DF)</option>
-                <option value="Espírito Santo (ES)">Espírito Santo (ES)</option>
-                <option value="Goiás (GO)">Goiás (GO)</option>
-                <option value="Maranhão (MA)">Maranhão (MA)</option>
-                <option value="Mato Grosso (MT)">Mato Grosso (MT)</option>
-                <option value="Mato Grosso do Sul (MS)">Mato Grosso do Sul (MS)</option>
-                <option value="Minas Gerais (MG)">Minas Gerais (MG)</option>
-                <option value="Pará (PA)">Pará (PA)</option>
-                <option value="Paraíba (PB)">Paraíba (PB)</option>
-                <option value="Paraná (PR)">Paraná (PR)</option>
-                <option value="Pernambuco (PE)">Pernambuco (PE)</option>
-                <option value="Piauí (PI)">Piauí (PI)</option>
-                <option value="Rio de Janeiro (RJ)">Rio de Janeiro (RJ)</option>
-                <option value="Rio Grande do Norte (RN)">Rio Grande do Norte (RN)</option>
-                <option value="Rio Grande do Sul (RS)">Rio Grande do Sul (RS)</option>
-                <option value="Rondônia (RO)">Rondônia (RO)</option>
-                <option value="Roraima (RR)">Roraima (RR)</option>
-                <option value="Santa Catarina (SC)">Santa Catarina (SC)</option>
-                <option value="São Paulo (SP)">São Paulo (SP)</option>
-                <option value="Sergipe (SE)">Sergipe (SE)</option>
-                <option value="Tocantins (TO)">Tocantins (TO)</option>
-            </select>
+        <select id="estado" name="estado">
+          <option value="Selecione seu estado" selected disabled>
+            Selecione seu estado
+          </option>
+          <option value="Acre (AC)">Acre (AC)</option>
+          <option value="Alagoas (AL)">Alagoas (AL)</option>
+          <option value="Amapá (AP)">Amapá (AP)</option>
+          <option value="Amazonas (AM)">Amazonas (AM)</option>
+          <option value="Bahia (BA)">Bahia (BA)</option>
+          <option value="Ceará (CE)">Ceará (CE)</option>
+          <option value="Distrito Federal (DF)">Distrito Federal (DF)</option>
+          <option value="Espírito Santo (ES)">Espírito Santo (ES)</option>
+          <option value="Goiás (GO)">Goiás (GO)</option>
+          <option value="Maranhão (MA)">Maranhão (MA)</option>
+          <option value="Mato Grosso (MT)">Mato Grosso (MT)</option>
+          <option value="Mato Grosso do Sul (MS)">
+            Mato Grosso do Sul (MS)
+          </option>
+          <option value="Minas Gerais (MG)">Minas Gerais (MG)</option>
+          <option value="Pará (PA)">Pará (PA)</option>
+          <option value="Paraíba (PB)">Paraíba (PB)</option>
+          <option value="Paraná (PR)">Paraná (PR)</option>
+          <option value="Pernambuco (PE)">Pernambuco (PE)</option>
+          <option value="Piauí (PI)">Piauí (PI)</option>
+          <option value="Rio de Janeiro (RJ)">Rio de Janeiro (RJ)</option>
+          <option value="Rio Grande do Norte (RN)">
+            Rio Grande do Norte (RN)
+          </option>
+          <option value="Rio Grande do Sul (RS)">Rio Grande do Sul (RS)</option>
+          <option value="Rondônia (RO)">Rondônia (RO)</option>
+          <option value="Roraima (RR)">Roraima (RR)</option>
+          <option value="Santa Catarina (SC)">Santa Catarina (SC)</option>
+          <option value="São Paulo (SP)">São Paulo (SP)</option>
+          <option value="Sergipe (SE)">Sergipe (SE)</option>
+          <option value="Tocantins (TO)">Tocantins (TO)</option>
+        </select>
+        <br />
         <label for="cidade">Cidade:</label>
-        <input type="text" name="cidade" id="cidade" placeholder="ex.: Quissamã">
-        <br>
+        <input
+          type="text"
+          name="cidade"
+          id="cidade"
+          placeholder="ex.: Quissamã"
+        />
+        <br />
         <label for="cep">CEP:</label>
-        <input type="number" name="cep" id="cep" placeholder="ex.: 28735200">
-    </fieldset>
-    <fieldset>
+        <input type="number" name="cep" id="cep" placeholder="ex.: 28735200" />
+      </fieldset>
+      <fieldset>
         <legend>Dados de login:</legend>
         <label for="email">E-mail:</label>
-        <input type="email" name="email" id="email" placeholder="ex.: joao@gmail.com">
-        <br>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="ex.: joao@gmail.com"
+        />
+        <br />
         <label for="ft">Imagem de perfil:</label>
-        <input type="file" name="ft" id="ft" accept="image/png, image/jpeg">
-        <br>
+        <input type="file" name="ft" id="ft" accept="image/png, image/jpeg" />
+        <br />
         <label for="login">Login de usuário:</label>
-        <input type="name" name="user" id="user" placeholder="ex.: jaoobielrib">
-        <br>
+        <input
+          type="name"
+          name="user"
+          id="user"
+          placeholder="ex.: jaoobielrib"
+        />
+        <br />
         <label for="senha">Senha:</label>
-        <input type="password" name="senha" id="senha" placeholder="ex.: joao1598">
-        <br>
+        <input
+          type="password"
+          name="senha"
+          id="senha"
+          placeholder="ex.: joao1598"
+        />
+        <br />
         <label for="senha2">Confirme a senha:</label>
-        <input type="password" name="senha2" id="senha2" placeholder="ex.: joao1598">
-    </fieldset>
-    <fieldset>
+        <input
+          type="password"
+          name="senha2"
+          id="senha2"
+          placeholder="ex.: joao1598"
+        />
+      </fieldset>
+      <fieldset>
         <legend>Complementos:</legend>
         <label for="esporte">Esporte predileto:</label>
-        <input type="text" name="esporte" id="esporte" placeholder="ex.: Futebol">
-        <br>
+        <input
+          type="text"
+          name="esporte"
+          id="esporte"
+          placeholder="ex.: Futebol"
+        />
+        <br />
         <label for="arq">Arquivos Pessoais:</label>
-        <input type="file" name="arq" id="arq" accept="application/pdf">
-        <br>
+        <input type="file" name="arq" id="arq" accept="application/pdf" />
+        <br />
         <fieldset class="diva">
-            <legend>Gênero:</legend>
-            <div>
-                <input type="radio" id="nome1" name="opcao" value="Homem" checked>
-                <label for="op1">Homem</label>
-                <br>
-                <input type="radio" id="nome2" name="opcao" value="Mulher">
-                <label for="op1">Mulher</label>
-            </div>
+          <legend>Gênero:</legend>
+          <div>
+            <input type="radio" id="nome1" name="opcao" value="Homem" checked />
+            <label for="op1">Homem</label>
+            <br />
+            <input type="radio" id="nome2" name="opcao" value="Mulher" />
+            <label for="op1">Mulher</label>
+          </div>
         </fieldset>
         <fieldset class="diva">
-            <legend>Recursos disponíveis em casa:</legend>
-            <input type="checkbox" name="opc1" id="opcao2" value="Celular" checked>
-            <label for="celular">Celular</label>
-            <input type="checkbox" name="opc1" id="opcao3" value="Tablet">
-            <label for="tablet">Tablet</label>
-            <input type="checkbox" name="opc1" id="opcao4" value="Notebook" checked>
-            <label for="notebook">Notebook</label>
-            <input type="checkbox" name="opc1" id="opcao5" value="Computador de Mesa" checked>
-            <label for="comp">Computador de Mesa</label>
-            <input type="checkbox" name="opc1" id="opcao6" value="Internet" checked>
-            <label for="internet">Internet</label>
-        </div>
+          <legend>Recursos disponíveis em casa:</legend>
+          <input
+            type="checkbox"
+            name="opc1"
+            id="opcao2"
+            value="Celular"
+            checked
+          />
+          <label for="celular">Celular</label>
+          <input type="checkbox" name="opc1" id="opcao3" value="Tablet" />
+          <label for="tablet">Tablet</label>
+          <input
+            type="checkbox"
+            name="opc1"
+            id="opcao4"
+            value="Notebook"
+            checked
+          />
+          <label for="notebook">Notebook</label>
+          <input
+            type="checkbox"
+            name="opc1"
+            id="opcao5"
+            value="Computador de Mesa"
+            checked
+          />
+          <label for="comp">Computador de Mesa</label>
+          <input
+            type="checkbox"
+            name="opc1"
+            id="opcao6"
+            value="Internet"
+            checked
+          />
+          <label for="internet">Internet</label>
         </fieldset>
         <label for="color">Selecione uma cor de fundo para o Formulário:</label>
-        <input type="color" name="cor" id="cor">
-        <br>
-        <label for="color2">Selecione uma cor de fonte para o Formulário:</label>
-        <input type="color" name="cor2" id="cor2">
-        <br>
+        <input type="color" name="cor" id="cor" />
+        <br />
+        <label for="color2"
+          >Selecione uma cor de fonte para o Formulário:</label
+        >
+        <input type="color" name="cor2" id="cor2" />
+        <br />
         <label for="mensagem">Digite uma mensagem:</label>
-        <input type="text" name="msg" id="msg">
-        <br>
+        <input type="text" name="msg" id="msg" />
+        <br />
         <label for="envio">Exibir a mensagem</label>
-        <input type="submit">
-        <br>
+        <input type="submit" />
+        <br />
         <label for="aniver">Aniversário</label>
-        <input type="date" name="aniver" id="aniver">
-        <br>
-        <label for="dataantes">Data antes de: (2021-12-31) e após (2000-01-01)</label>
-        <input type="date" name="dataantes" id="dataantes" min="2000-01-01" max="2021-12-31">
-        <br>
+        <input type="date" name="aniver" id="aniver" />
+        <br />
+        <label for="dataantes"
+          >Data antes de: (2021-12-31) e após (2000-01-01)</label
+        >
+        <input
+          type="date"
+          name="dataantes"
+          id="dataantes"
+          min="2000-01-01"
+          max="2021-12-31"
+        />
+        <br />
         <label for="exdata">Exemplo de data com hora:</label>
-        <input type="datetime-local" name="datahr" id="datahr">
-        <br>
+        <input type="datetime-local" name="datahr" id="datahr" />
+        <br />
         <label for="mes">Mês & ano:</label>
-        <input type="month" name="month" id="month">
-        <br>
-        <label for="retornow01">Retorna w01 (1 é o número da semana entre 52)</label>
-        <input type="week" name="semana" id="semana" min="1" max="52">
-        <br>
+        <input type="month" name="month" id="month" />
+        <br />
+        <label for="retornow01"
+          >Retorna w01 (1 é o número da semana entre 52)</label
+        >
+        <input type="week" name="semana" id="semana" min="1" max="52" />
+        <br />
         <label for="nmrint">Digite número inteiro:</label>
-        <input type="number" name="nmr" id="nmr" min="0" step="1" placeholder="ex.: 3" ***REVER COM JAVA***>
-        <br>
-        <label for="nmr714">Digite um número entre o intervalo de 7 e 14:</label>
-        <input type="number" name="setec" id="setec" min="7" max="14" placeholder="ex.: 12">
-        <br>
+        <input
+          type="number"
+          name="nmr"
+          id="nmr"
+          min="0"
+          step="1"
+          placeholder="ex.: 3"
+          ***REVER
+          COM
+          JAVA***
+        />
+        <br />
+        <label for="nmr714"
+          >Digite um número entre o intervalo de 7 e 14:</label
+        >
+        <input
+          type="number"
+          name="setec"
+          id="setec"
+          min="7"
+          max="14"
+          placeholder="ex.: 12"
+        />
+        <br />
         <label for="homepage">Sua homepage</label>
-        <input type="url" name="linkhome" id="linkhome"  placeholder="ex.: https://www.facebook.com/">
-    </fieldset>
-</main>
-</body>
+        <input
+          type="url"
+          name="linkhome"
+          id="linkhome"
+          placeholder="ex.: https://www.facebook.com/"
+        />
+      </fieldset>
+    </form>
+  </body>
 </html>
