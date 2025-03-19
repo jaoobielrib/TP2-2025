@@ -1,0 +1,41 @@
+main, body, h1, h2 {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px; 
+    box-sizing: border-box; 
+    background-color: lightblue;
+}
+
+h1, h2 {
+    line-height: 5px;
+}
+
+fieldset {
+    margin-bottom: 15px;
+    margin-top: 0px;
+    background-color: lightgreen;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+
+.divx {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+}
+
+.diva {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.diva fieldset {
+    flex: 1;
+    min-width: 250px; /* Garante que os elementos não fiquem muito pequenos */
+}
+
+
