@@ -12,10 +12,12 @@
 <main>
     <fieldset>
         <legend>Dados Pessoais</legend>
-        <label for="nome">Nome:</label>
-        <input type="text" name="Nome" id="name" placeholder="Fulano de tal">
-        <label for="sobrn">Sobrenome:</label>
-        <input type="text" name="Sobrenome:" id="sobrn" placeholder="ex.: Pereira">
+        <div class="divx">
+            <label for="nome">Nome:</label>
+            <input type="text" name="Nome" id="name" placeholder="Fulano de tal">
+            <label for="sobrn">Sobrenome:</label>
+            <input type="text" name="Sobrenome:" id="sobrn" placeholder="ex.: Pereira">
+        </div>
         <br>
         <label for="nasc">Nascimento:</label>
         <input type="date" id="date" placeholder="Dia">
@@ -98,7 +100,7 @@
         <label for="arq">Arquivos Pessoais:</label>
         <input type="file" name="arq" id="arq" accept="application/pdf">
         <br>
-        <fieldset>
+        <fieldset class="diva">
             <legend>Gênero:</legend>
             <div>
                 <input type="radio" id="nome1" name="opcao" value="Homem" checked>
@@ -108,7 +110,7 @@
                 <label for="op1">Mulher</label>
             </div>
         </fieldset>
-        <fieldset>
+        <fieldset class="diva">
             <legend>Recursos disponíveis em casa:</legend>
             <input type="checkbox" name="opc1" id="opcao2" value="Celular" checked>
             <label for="celular">Celular</label>
@@ -120,6 +122,7 @@
             <label for="comp">Computador de Mesa</label>
             <input type="checkbox" name="opc1" id="opcao6" value="Internet" checked>
             <label for="internet">Internet</label>
+        </div>
         </fieldset>
         <label for="color">Selecione uma cor de fundo para o Formulário:</label>
         <input type="color" name="cor" id="cor">
