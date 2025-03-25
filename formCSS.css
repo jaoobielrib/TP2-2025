@@ -29,3 +29,8 @@ fieldset {
 input {
     border-radius: 10px;
 }
+
+.meio {
+    display: block;
+    margin: auto;
+}
