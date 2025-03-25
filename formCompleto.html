@@ -9,7 +9,7 @@
   <body>
     <h1>Formulário HTML</h1>
     <h2>Preencha o formulário abaixo:</h2>
-    <form action="" method="">
+    <form action="#" method="post">
       <fieldset>
         <legend>Dados Pessoais</legend>
         <div class="divx">
@@ -66,8 +66,7 @@
         <br />
         <label for="estado">Estado</label>
         <select id="estado" name="estado">
-          <option value="Selecione seu estado" selected disabled>
-            Selecione seu estado
+          <option value="Selecione seu estado" selected disabled>Selecione seu estado
           </option>
           <option value="Acre (AC)">Acre (AC)</option>
           <option value="Alagoas (AL)">Alagoas (AL)</option>
@@ -80,9 +79,7 @@
           <option value="Goiás (GO)">Goiás (GO)</option>
           <option value="Maranhão (MA)">Maranhão (MA)</option>
           <option value="Mato Grosso (MT)">Mato Grosso (MT)</option>
-          <option value="Mato Grosso do Sul (MS)">
-            Mato Grosso do Sul (MS)
-          </option>
+          <option value="Mato Grosso do Sul (MS)">Mato Grosso do Sul (MS)</option>
           <option value="Minas Gerais (MG)">Minas Gerais (MG)</option>
           <option value="Pará (PA)">Pará (PA)</option>
           <option value="Paraíba (PB)">Paraíba (PB)</option>
@@ -90,9 +87,7 @@
           <option value="Pernambuco (PE)">Pernambuco (PE)</option>
           <option value="Piauí (PI)">Piauí (PI)</option>
           <option value="Rio de Janeiro (RJ)">Rio de Janeiro (RJ)</option>
-          <option value="Rio Grande do Norte (RN)">
-            Rio Grande do Norte (RN)
-          </option>
+          <option value="Rio Grande do Norte (RN)">Rio Grande do Norte (RN)</option>
           <option value="Rio Grande do Sul (RS)">Rio Grande do Sul (RS)</option>
           <option value="Rondônia (RO)">Rondônia (RO)</option>
           <option value="Roraima (RR)">Roraima (RR)</option>
@@ -257,9 +252,6 @@
           min="0"
           step="1"
           placeholder="ex.: 3"
-          ***REVER
-          COM
-          JAVA***
         />
         <br />
         <label for="nmr714"
@@ -282,6 +274,9 @@
           placeholder="ex.: https://www.facebook.com/"
         />
       </fieldset>
+      <input type="submit" value="Enviar" class="meio">
+      <input type="reset" value="Limpar" class="meio">
     </form>
+    <script src="scriptFORMC.js"></script>
   </body>
 </html>
