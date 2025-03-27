@@ -1,36 +1,176 @@
+/* Definindo o estilo básico para o formulário */
 form, body {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 body {
-    max-width: 600px;
-    background-color: lightgoldenrodyellow;
+    background-color: #f7f7f7;
+    color: #333;
 }
 
 h1, h2 {
-    max-width: 600px;
-    margin: 0 auto;
     text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #000
 }
 
 fieldset {
-    background-color: lightblue;
+    background-color: #e0f7fa;
+    border: black 1px solid; 
     display: flex;
     flex-direction: column;
-    line-height: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 1.5%;
-    border-radius: 20px;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #000;
+    padding: 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+input[type="password"],
+input[type="url"],
+input[type="file"],
+input[type="color"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input[type="submit"], 
+input[type="reset"] {
+    background-color: #4B9CD3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 48%; 
+    display: inline-block;
+    margin: 10px 1%;
+    text-align: center;
+}
+
+input[type="submit"]:hover, 
+input[type="reset"]:hover {
+    background-color: #357ABD;
+}
+
+input[type="checkbox"], 
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+input[type="radio"]:checked, 
+input[type="checkbox"]:checked {
+    background-color: #4B9CD3;
+}
+
+.divx {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.divx label {
+    width: 48%;
     margin-bottom: 10px;
 }
 
-input {
-    border-radius: 10px;
+.divx input {
+    width: 48%;
 }
 
-.meio {
-    display: block;
-    margin: auto;
+input[type="color"] {
+    padding: 0;
+    width: 50px;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+input#msg {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    padding: 10px;
+}
+
+select {
+    padding: 10px;
+    margin: 8px 0 15px 0;
+    border-radius: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+input[type="file"] {
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+fieldset .diva {
+    margin-bottom: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+input[type="date"], 
+input[type="datetime-local"],
+input[type="month"], 
+input[type="week"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"], 
+input[type="reset"] {
+    width: 48%;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #4B9CD3;
+    color: white;
+    border: none;
+    display: inline-block;
+    margin-right: 4%;
+}
+
+input[type="submit"]:hover, 
+input[type="reset"]:hover {
+    background-color: #357ABD;
 }
