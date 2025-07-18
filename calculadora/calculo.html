@@ -1,1 +1,38 @@
-
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="João Gabriel">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora Geométrica</h1>
+    <label for="forma">Escolha a forma geométrica:</label>
+    <select>
+        <option value="quadrado">Quadrado</option>
+        <option value="ret">Retângulo</option>
+        <option value="paral">Paralelogramo</option>
+        <option value="trap">Trapézio</option>
+        <option value="los">Losango</option>
+        <option value="tria">Triângulo</option>
+        <option value="circ">Círculo</option>
+        <option value="el">Elipse</option>
+        <option value="esf">Esfera</option>
+        <option value="cil">Cilindro</option>
+    </select>
+    <br>
+    <label for="diMa">Defina a Diagonal Maior:</label>
+    <input type="number" name="diMa" id="diMa">
+    <br>
+    <label for="diMe">Defina a Diagonal Menor:</label>
+    <input type="number" name="diMe" id="diMe">
+    <br>
+    <div id="dados"></div>
+    <button onclick="calcularA">Calcular Área</button>
+    <button onclick="calcularP">Calcular Perímetro</button>
+    <button onclick="calcularV">Calcular Volume</button>
+    <script src="calculadora.js"></script>
+</body>
+</html>
