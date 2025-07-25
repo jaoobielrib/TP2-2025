@@ -10,7 +10,8 @@
 <body>
     <h1>Calculadora Geométrica</h1>
     <label for="forma">Escolha a forma geométrica:</label>
-    <select>
+    <select id="forma" onchange="mostrarCampos()">
+        <option value=""></option>
         <option value="quadrado">Quadrado</option>
         <option value="ret">Retângulo</option>
         <option value="paral">Paralelogramo</option>
@@ -23,16 +24,13 @@
         <option value="cil">Cilindro</option>
     </select>
     <br>
-    <label for="diMa">Defina a Diagonal Maior:</label>
-    <input type="number" name="diMa" id="diMa">
-    <br>
-    <label for="diMe">Defina a Diagonal Menor:</label>
-    <input type="number" name="diMe" id="diMe">
-    <br>
     <div id="dados"></div>
-    <button onclick="calcularA">Calcular Área</button>
-    <button onclick="calcularP">Calcular Perímetro</button>
-    <button onclick="calcularV">Calcular Volume</button>
+    <button onclick="calcularA()">Calcular Área</button>
+    <button onclick="calcularP()">Calcular Perímetro</button>
+    <button onclick="calcularV()">Calcular Volume</button>
+    <p id="resultadoA"></p>
+    <p id="resultadoP"></p>
+    <p id="resultadoV"></p>
     <script src="calculadora.js"></script>
 </body>
 </html>
