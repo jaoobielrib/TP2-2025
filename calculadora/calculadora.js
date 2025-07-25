@@ -41,6 +41,12 @@ function mostrarCampos() {
                           <br>
                           <label for="alturaTrap">Altura:</label>
                           <input type="number" id="alturaTrap" required>
+                          <br>
+                          <label for="lado1">Lado 1:</label>
+                          <input type="number" id="lado1" required>
+                          <br>
+                          <label for="lado2">Lado 2:</label>
+                          <input type="number" id="lado2" required>
                       `;
       break;
 
@@ -51,6 +57,9 @@ function mostrarCampos() {
                           <br>
                           <label for="diagonalMenor">Diagonal Menor:</label>
                           <input type="number" id="diagonalMenor" required>
+                          <br>
+                          <label for="ladoL">Lado:</label>
+                          <input type="number" id="ladoL" required>
                       `;
       break;
 
@@ -61,6 +70,15 @@ function mostrarCampos() {
                           <br>
                           <label for="alturaT">Altura:</label>
                           <input type="number" id="alturaT" required>
+                          <br>
+                          <label for="ladoT1">Lado 1:</label>
+                          <input type="number" id="ladoT1" required>
+                          <br>
+                          <label for="ladoT2">Lado 2:</label>
+                          <input type="number" id="ladoT2" required>
+                          <br>
+                          <label for="ladoT3">Lado 3:</label>
+                          <input type="number" id="ladoT3" required>
                       `;
       break;
 
@@ -113,6 +131,7 @@ function calcularA() {
     case "quadrado":
       const lado = parseFloat(document.getElementById("lado").value);
       resultadoA = lado * lado;
+      document.getElementById("resultadoA").innerText = `Área = ${resultadoA}`;
       break;
 
     case "ret":
@@ -121,12 +140,14 @@ function calcularA() {
         document.getElementById("comprimento").value
       );
       resultadoA = largura * comprimento;
+      document.getElementById("resultadoA").innerText = `Área = ${resultadoA}`;
       break;
 
     case "paral":
       const base = parseFloat(document.getElementById("base").value);
       const altura = parseFloat(document.getElementById("altura").value);
       resultadoA = base * altura;
+      document.getElementById("resultadoA").innerText = `Área = ${resultadoA}`;
       break;
 
     case "trap":
@@ -136,6 +157,7 @@ function calcularA() {
         document.getElementById("alturaTrap").value
       );
       resultadoA = ((baseMaior + baseMenor) * alturaTrap) / 2;
+      document.getElementById("resultadoA").innerText = `Área = ${resultadoA}`;
       break;
 
     case "los":
@@ -146,23 +168,27 @@ function calcularA() {
         document.getElementById("diagonalMenor").value
       );
       resultadoA = (diagonalMaior * diagonalMenor) / 2;
+      document.getElementById("resultadoA").innerText = `Área = ${resultadoA}`;
       break;
 
     case "tria":
       const baseT = parseFloat(document.getElementById("baseT").value);
       const alturaT = parseFloat(document.getElementById("alturaT").value);
       resultadoA = (baseT * alturaT) / 2;
+      document.getElementById("resultadoA").innerText = `Área = ${resultadoA}`;
       break;
 
     case "circ":
       const raio = parseFloat(document.getElementById("raio").value);
       resultadoA = Math.PI * Math.pow(raio, 2);
+      document.getElementById("resultadoA").innerText = `Área = ${resultadoA.toFixed(2)}`;
       break;
 
     case "el":
       const semiEMa = parseFloat(document.getElementById("semiEMa").value);
       const semiEMe = parseFloat(document.getElementById("semiEMe").value);
       resultadoA = Math.PI * semiEMa * semiEMe;
+      document.getElementById("resultadoA").innerText = `Área = ${resultadoA.toFixed(2)}`;
       break;
 
     case "esf":
@@ -170,12 +196,14 @@ function calcularA() {
         document.getElementById("raioEsfera").value
       );
       resultadoA = 4 * Math.PI * Math.pow(raioEsfera, 2);
+      document.getElementById("resultadoA").innerText = `Área = ${resultadoA.toFixed(2)}`;
       break;
 
     case "cil":
       const raioCil = parseFloat(document.getElementById("raioCil").value);
       const alturaCil = parseFloat(document.getElementById("alturaCil").value);
-      resultadoA = Math.PI * Math.pow(raioCil, 2) * alturaCil;
+      resultadoA = 2 * Math.PI * raioCil * alturaCil + 2 * Math.PI * Math.pow(raioCil, 2);
+      document.getElementById("resultadoA").innerText = `Área = ${resultadoA.toFixed(2)}`;
       break;
 
     default:
@@ -184,7 +212,6 @@ function calcularA() {
       break;
   }
 
-  document.getElementById("resultadoA").innerText = `Área = ${resultadoA}`;
 }
 
 function calcularP() {
@@ -192,64 +219,66 @@ function calcularP() {
     let resultadoP = 0;
   
     switch (forma) {
+
+      case "esf":
+      case "cil":
+        document.getElementById("resultadoP").innerText = "Por ser uma figura tridimensional, não é possível calcular o perímetro"
+        break;
+
       case "quadrado":
         const lado = parseFloat(document.getElementById("lado").value);
         resultadoP = lado * 4;
+        document.getElementById("resultadoP").innerText = `Perímetro = ${resultadoP}`;
         break;
   
       case "ret":
         const largura = parseFloat(document.getElementById("largura").value);
         const comprimento = parseFloat(document.getElementById("comprimento").value);
         resultadoP = 2 * (largura + comprimento);
+        document.getElementById("resultadoP").innerText = `Perímetro = ${resultadoP}`;
         break;
   
       case "paral":
         const base = parseFloat(document.getElementById("base").value);
         const altura = parseFloat(document.getElementById("altura").value);
         resultadoP = 2 * (base + altura);
+        document.getElementById("resultadoP").innerText = `Perímetro = ${resultadoP}`;
         break;
   
       case "trap":
         const baseMaior = parseFloat(document.getElementById("baseMaior").value);
         const baseMenor = parseFloat(document.getElementById("baseMenor").value);
-        const alturaTrap = parseFloat(document.getElementById("alturaTrap").value);
-        resultadoP = baseMaior + baseMenor + 2 * alturaTrap;
+        const lado1 = parseFloat(document.getElementById("lado1").value);
+        const lado2 = parseFloat(document.getElementById("lado2").value);
+        resultadoP = baseMaior + baseMenor + lado1 + lado2;
+        document.getElementById("resultadoP").innerText = `Perímetro = ${resultadoP}`;
         break;
   
       case "los":
-        const diagonalMaior = parseFloat(document.getElementById("diagonalMaior").value);
-        const diagonalMenor = parseFloat(document.getElementById("diagonalMenor").value);
-        resultadoP = diagonalMaior + diagonalMenor
+        const ladoL = parseFloat(document.getElementById("ladoL").value)
+        resultadoP = 4 * ladoL
+        document.getElementById("resultadoP").innerText = `Perímetro = ${resultadoP}`;
         break;
   
       case "tria":
-        const baseT = parseFloat(document.getElementById("baseT").value);
-        const alturaT = parseFloat(document.getElementById("alturaT").value);
-        resultadoP = 3 * baseT
+        const ladoT1 = parseFloat(document.getElementById("ladoT1").value)
+        const ladoT2 = parseFloat(document.getElementById("ladoT2").value)
+        const ladoT3 = parseFloat(document.getElementById("ladoT3").value)
+        resultadoP = ladoT1 + ladoT2 + ladoT3
+        document.getElementById("resultadoP").innerText = `Perímetro = ${resultadoP}`;
         break;
   
       case "circ":
         const raio = parseFloat(document.getElementById("raio").value);
         resultadoP = 2 * Math.PI * raio
+        document.getElementById("resultadoP").innerText = `Perímetro = ${resultadoP.toFixed(2)}`;
         break;
   
       case "el":
         const semiEMa = parseFloat(document.getElementById("semiEMa").value);
         const semiEMe = parseFloat(document.getElementById("semiEMe").value);
-        resultadoP = 2 * Math.PI * Math.sqrt((Math.pow(semiEMa, 2) + Math.pow(semiEMe, 2))/2)
-        break;
-  
-      case "esf":
-        const raioEsfera = parseFloat(
-          document.getElementById("raioEsfera").value
-        );
-        resultadoP = 2 * Math.PI * raioEsfera
-        break;
-  
-      case "cil":
-        const raioCil = parseFloat(document.getElementById("raioCil").value);
-        const alturaCil = parseFloat(document.getElementById("alturaCil").value);
-        resultadoP = 2 * Math.PI * raioCil
+        resultadoP = Math.PI*(3*(semiEMa + semiEMe) - Math.sqrt((3*semiEMa + semiEMe)*(semiEMa + 3*semiEMe)))
+        document.getElementById("resultadoP").innerText = `Perímetro ≈ ${resultadoP.toFixed(2)}`;
         break;
   
       default:
@@ -257,7 +286,39 @@ function calcularP() {
           "Inválido";
         break;
     }
-  
-    document.getElementById("resultadoP").innerText = `Área = ${resultadoP}`;
   }
 
+  function calcularV() {
+    const forma = document.getElementById("forma").value;
+    let resultadoV = 0
+  
+    switch (forma) {
+      case "quadrado":
+      case "ret":
+      case "paral":
+      case "trap":
+      case "los":
+      case "tria":
+      case "circ":
+      case "el":
+        document.getElementById("resultadoV").innerText = "Por ser uma figura bidimensional, não é possível calcular o volume";
+        break;
+  
+      case "esf":
+        const raioEsfera = parseFloat(document.getElementById("raioEsfera").value); 
+        resultadoV = (4 / 3) * Math.PI * Math.pow(raioEsfera, 3);
+        document.getElementById("resultadoV").innerText = `Volume = ${resultadoV.toFixed(2)}`;
+        break;
+  
+      case "cil":
+        const raioCil = parseFloat(document.getElementById("raioCil").value);
+        const alturaCil = parseFloat(document.getElementById("alturaCil").value);
+        resultadoV = Math.PI * Math.pow(raioCil, 2) * alturaCil;
+        document.getElementById("resultadoV").innerText = `Volume = ${resultadoV.toFixed(2)}`;
+        break;
+  
+      default:
+        document.getElementById("resultadoV").innerText = "Inválido";
+        break;
+    }
+  }
